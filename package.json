@@ -1,0 +1,28 @@
+{
+  "name": "fanal-app",
+  "private": true,
+  "version": "0.1.0-mvp",
+  "type": "module",
+  "scripts": {
+    "dev:web": "vite",
+    "dev:api": "node --watch server/index.mjs",
+    "dev": "concurrently -n api,web -c green,cyan \"npm run dev:api\" \"npm run dev:web\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.6.1",
+    "@noble/secp256k1": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0",
+    "ssh2": "^1.16.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.11"
+  }
+}
